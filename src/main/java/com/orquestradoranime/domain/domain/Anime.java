@@ -22,7 +22,7 @@ package com.orquestradoranime.domain.domain;
 //}
 
 
-//import com.mangaproject.anime.orquestrador.domain.enums.genreType;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.orquestradoranime.application.presentation.representation.enums.TipoGeneroRepresentation;
 import com.orquestradoranime.domain.enums.TipoGenero;

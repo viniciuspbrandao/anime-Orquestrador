@@ -1,10 +1,16 @@
 package com.orquestradoranime.application.presentation;
 
-
+import com.orquestradoranime.application.infraestructure.AnimeRepositoryImpl;
+import com.orquestradoranime.domain.camel.route.AnimeRouter;
+import com.orquestradoranime.domain.domain.Anime;
+import com.orquestradoranime.domain.port.AnimeRepository;
+//import com.orquestradoranime.rabbitmq.service.RabbitmqService;
 import com.orquestradoranime.application.mapper.AnimeMapper;
 import com.orquestradoranime.application.presentation.representation.AnimeRequestRepresentation;
 import com.orquestradoranime.application.presentation.representation.AnimeResponseRepresentation;
 import com.orquestradoranime.domain.service.AnimeService;
+//import com.orquestradoranime.rabbitmq.constantes.RabbitmqConstantes;
+
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -27,9 +33,9 @@ public class AnimeController {
     public ResponseEntity<List<AnimeResponseRepresentation>> listarAnimes() {
         var animeList = animeService.listarAnimes().stream().toList();
         var representationList = AnimeMapper.toAnimeResponseRepresentationList(animeList);
-
         return ResponseEntity.status(HttpStatus.OK).body(representationList);
     }
+
 
     @GetMapping(path = "id/{id}")
     public ResponseEntity<AnimeResponseRepresentation> searchAnimeById(@PathVariable(value = "id") Long id) {
