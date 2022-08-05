@@ -48,19 +48,3 @@ public class AnimeRepositoryImpl implements AnimeRepository {
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

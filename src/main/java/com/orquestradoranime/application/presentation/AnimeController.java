@@ -62,4 +62,3 @@ public class AnimeController {
         return ResponseEntity.ok().build();
     }
 }
-

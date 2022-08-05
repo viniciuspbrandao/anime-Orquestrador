@@ -1,11 +1,9 @@
 package com.orquestradoranime.domain.service;
 
-
 import com.orquestradoranime.domain.camel.CamelContextWrapper;
 import com.orquestradoranime.domain.camel.route.AnimeRouter;
 import com.orquestradoranime.domain.domain.Anime;
 import org.apache.camel.ProducerTemplate;
-
 
 import java.util.List;
 

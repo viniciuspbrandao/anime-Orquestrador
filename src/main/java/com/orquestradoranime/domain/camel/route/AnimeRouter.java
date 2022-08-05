@@ -20,7 +20,7 @@ public class AnimeRouter extends RouteBuilder {
         from(ROUTE_URI)
                 .bean(animeRepository, "listarAnimes");
         from(ROUTE_URI_BY_ID)
-                .bean(animeRepository, "findAnimeById"); //Deve estar errado
+                .bean(animeRepository, "findAnimeById");
         from(ROUTE_URI_SAVE)
                 .bean(animeRepository, "inserirNovoAnime");
         from(ROUTE_URI_UPDATE)
